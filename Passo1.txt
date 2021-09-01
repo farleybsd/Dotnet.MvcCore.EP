@@ -1,0 +1,11 @@
+Editar o startup.cs
+ app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                "default",
+                "{controller=Home}/{action=Index}/{id?}");
+            });
+
+
+
+            https://localhost:44348/Gestao/Home/index/10
