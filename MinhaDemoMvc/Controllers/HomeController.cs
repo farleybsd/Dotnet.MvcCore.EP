@@ -31,7 +31,12 @@ namespace MinhaDemoMvc.Controllers
         [Route("politica-de-privacidade")]
         public IActionResult Privacy()
         {
-            return View();
+            return Content("Qualquer Coisa");
+            //var filebytes = System.IO.File.ReadAllBytes(@"C:\ISLogFile.txt");
+            //var filleName = "ISLogFile.txt";
+            //return File(filebytes, System.Net.Mime.MediaTypeNames.Application.Octet, filleName);
+           // return Json("{'nome':'Farley Rufino'}");
+           // return View();
             //return View("Privacy");
         }
 
