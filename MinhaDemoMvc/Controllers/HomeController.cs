@@ -14,14 +14,19 @@ namespace MinhaDemoMvc.Controllers
     [Route("gestao-clientes")] // Prefixo
     public class HomeController : Controller
     {
+        [Route("")]
+        public IActionResult Index()
+        {
+            return View();
+        }
         //https://localhost:44348/gestao-clientes/pagina-inicial/10?categoria=15
         //https://localhost:44348/gestao-clientes/pagina-inicial/10/7F1C1C19-1C8F-497D-86A7-B81CFECD1E5B
-        [Route("")]
+       // [Route("")]
         [Route("pagina-inicial")]
         //[Route("pagina-inicial/{id}")]
         //[Route("pagina-inicial/{id:int}/{categoria?}")]
         [Route("pagina-inicial/{id:int}/{categoria:guid}")]
-        public IActionResult Index(int id , Guid categoria)
+        public IActionResult IndexModify(int id , Guid categoria)
         {
             var filme = new Filme { 
                 Titulo = "oi",
