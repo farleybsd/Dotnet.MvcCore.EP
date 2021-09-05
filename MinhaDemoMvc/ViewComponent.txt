@@ -1,0 +1,16 @@
+Criar A CLASSE CARRINHO
+Na raiz -> Criar a Pasta ViewComponent
+									-> Criar a classe CarrinhoViewComponent
+
+Criar a estrutura 
+Views->
+		Shared ->
+			    Components->
+							Carrinho ->
+										default.cshtml
+										
+Deixando as View component molo Global Editar _ViewImports.cshtml
+@addTagHelper "*,MinhaDemoMvc"
+
+Registrando a View Component no arquivo csthml que vc quiser
+<vc:Carrinho></vc:Carrinho>

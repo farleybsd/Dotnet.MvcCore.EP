@@ -3,11 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaDemoMvc", "MinhaDemoMvc.csproj", "{D639A95B-E4A1-4981-8620-95C21FE52101}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhaDemoMvc", "MinhaDemoMvc.csproj", "{D639A95B-E4A1-4981-8620-95C21FE52101}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Leia-me", "Leia-me", "{09470040-C370-4F52-8102-1BC7C20DCA5E}"
 	ProjectSection(SolutionItems) = preProject
 		..\Passo1.txt = ..\Passo1.txt
+		ViewComponent.txt = ViewComponent.txt
 	EndProjectSection
 EndProject
 Global
