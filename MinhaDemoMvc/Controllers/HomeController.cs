@@ -23,20 +23,37 @@ namespace MinhaDemoMvc.Controllers
         [Route("pagina-inicial/{id:int}/{categoria:guid}")]
         public IActionResult Index(int id , Guid categoria)
         {
-            return View();
+            var filme = new Filme { 
+                Titulo = "oi",
+                DataLancamento = DateTime.Now,
+                Genero = null,
+                Avaliacao = 10,
+                Valor=20000
+            };
+            return RedirectToAction("Privacy",filme);
+            //return View();
         }
         // Se o Nome da View For o Mesmo Nome do METODO
         // Nao precisa passar a View como parametro
         [Route("privacidade")]
         [Route("politica-de-privacidade")]
-        public IActionResult Privacy()
+        public IActionResult Privacy(Filme filme)
         {
-            return Content("Qualquer Coisa");
+            if(ModelState.IsValid)
+            {
+
+            }
+            foreach (var item in ModelState.Values.SelectMany(m => m.Errors))
+            {
+                Console.WriteLine(item.ErrorMessage);
+            }
+            return View("");
+            //return Content("Qualquer Coisa");
             //var filebytes = System.IO.File.ReadAllBytes(@"C:\ISLogFile.txt");
             //var filleName = "ISLogFile.txt";
             //return File(filebytes, System.Net.Mime.MediaTypeNames.Application.Octet, filleName);
-           // return Json("{'nome':'Farley Rufino'}");
-           // return View();
+            // return Json("{'nome':'Farley Rufino'}");
+            // return View();
             //return View("Privacy");
         }
 
