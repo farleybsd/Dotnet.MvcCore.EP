@@ -1,0 +1,10 @@
+Criar a Controller
+
+Criar a View 
+Dentro da pasta View Criar uma pasta representando o controller que foi criado
+Adicionar o arquivo CSHTML
+
+Abrir o arquico cshtml que voce quer fazer a chamada da nova view
+<li class="nav-item">
+ <a class="nav-link text-dark" asp-area="" asp-controller="Filmes" asp-action="Adicionar">Filmes</a>
+</li>

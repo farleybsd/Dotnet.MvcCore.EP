@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinhaDemoMvc", "MinhaDemoMv
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Leia-me", "Leia-me", "{09470040-C370-4F52-8102-1BC7C20DCA5E}"
 	ProjectSection(SolutionItems) = preProject
+		ApredendoForms.txt = ApredendoForms.txt
 		..\Passo1.txt = ..\Passo1.txt
 		ViewComponent.txt = ViewComponent.txt
 	EndProjectSection
