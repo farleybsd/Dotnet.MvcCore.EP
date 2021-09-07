@@ -1,0 +1,71 @@
+Criar a pasta Shared com Arquivo _Layout.cshtml
+
+Dentro da pasta View criar o arquivo _ViewStart.cshtml
+
+Criar A ViewImports.cshtml dentro da pasta View
+
+
+Adicionando Scripts ao pro -> Add -> Client-Side Libary
+* Instalar Jquery 3.3.1
+Jquery
+Core
+
+* Instalar jquery-validate@1.19.0
+
+Dentro de localization selecionar methodspt.js
+selecionar jquery.validate.js
+selecionar additional.methods.js
+
+* Instalar jquery-validation-unobtrusive@3.2.11
+selecionar jquery-validation-unobtrusive.js
+
+* Instalar twitter-bootstrap@4.2.1
+selecionar bootstrap.js
+selecionar bootstrap.css
+selecionar bootstrap-reboot.css
+selecionar bootstrap-grid.css
+
+* Instalar font-awesome@4.7.0
+selecionar font-awesome.css
+selecionar todas as fontes
+
+Registrar os Scripts na  View _Layout
+
+Startup.cs 
+ app.UseStaticFiles();
+
+ _Layout
+ <head>
+    <title>@ViewData["Title"] - Minha App Modelo</title>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/css/bootstrap.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+</head>
+
+<environment include="Development">
+        @*<script src="~/lib/jquery/dist/jquery.js"></script>*@
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/jquery.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                @*asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"*@
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
