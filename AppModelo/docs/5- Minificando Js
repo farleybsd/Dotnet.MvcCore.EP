@@ -1,0 +1,9 @@
+Criar o arquivo BundleConfig.json
+
+Selecionar a pasta wwwroot ou no quick lunch do visual studio
+
+procurar por Task Runner Explorer - Explorador do execultador de Tarefas
+
+Instalar a extensao Bundler &  Minifier
+
+Selecionar Update All File -> Run
