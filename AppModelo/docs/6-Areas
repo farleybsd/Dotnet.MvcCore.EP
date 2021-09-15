@@ -11,3 +11,4 @@ routes.MapRoute(
                     name: "areas",
                     template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
                     );
+Atencao Mover manualmente a nova area da pasta area para Modulos
