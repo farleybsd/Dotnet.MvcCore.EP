@@ -1,0 +1,13 @@
+No projeto Web botao direito Add Novo Item Sacaffoding Mvc Area 
+
+No html para chamar a area
+ <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="Produtos" asp-controller="Cadastro" asp-action="Index">Cadastro</a>
+</li>
+
+
+startup.cs para registrar a rota
+routes.MapRoute(
+                    name: "areas",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                    );
