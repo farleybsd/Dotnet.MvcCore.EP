@@ -1,0 +1,12 @@
+ * Transiente : (Na Duvida Transiente)
+ Obtèm uma nova instancia do objeto a cada solicitacao.
+
+ * Scoped :(Web Com Mvc)
+ Reutiliza a mesma instancia do objeto durante todo o request (Web)
+
+ * Singleton :(Nao Guarda estado) obs se Guarda informacao de usuaruio nao usar
+Utiliza a mesma instancia para toda aplicacao (Cuidado)
+
+* SingletonInstance :
+Quando vc quer iniciar uma classe com valor padrao
+services.AddSingleton<IoperacaoSingleton>(new operacao(Guid.Empty))
