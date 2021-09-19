@@ -10,3 +10,11 @@ Utiliza a mesma instancia para toda aplicacao (Cuidado)
 * SingletonInstance :
 Quando vc quer iniciar uma classe com valor padrao
 services.AddSingleton<IoperacaoSingleton>(new operacao(Guid.Empty))
+
+DI 
+
+
+DI reduz o acoplamento entre classes, facilitando a manutenção do código e permitindo modificações com baixo impacto de mudanças no projeto em geral. 
+DI permite que seu código seja testável, uma vez que é possível passar um Mock de uma classe injetada via construtor e simular todos os comportamentos via teste de unidade. 
+DI permite que o seu código atenda ao princípio SRP do SOLID e sua classe terá um e apenas um motivo para mudar, pois as classes injetadas atendem a um contrato específico
+e podem ser substituídas sem nenhuma necessidade de mudança na classe que recebe a injeção.  
