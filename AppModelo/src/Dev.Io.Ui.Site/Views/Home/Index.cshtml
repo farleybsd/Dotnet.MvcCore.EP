@@ -1,1 +1,6 @@
-﻿OLA
+﻿@using Dev.Io.Ui.Site.Data
+
+@inject IPedidoRepository PedidoRepository
+
+OLA! 
+@PedidoRepository.ObterPedido().Id

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dev.Io.Ui.Site.Data
 {
-    public class PeidoRepository : IPeidoRepository
+    public class PedidoRepository : IPedidoRepository
     {
         public Pedido ObterPedido()
         {
@@ -15,7 +15,7 @@ namespace Dev.Io.Ui.Site.Data
     }
 }
 
-public interface IPeidoRepository
+public interface IPedidoRepository
 {
     Pedido ObterPedido();
 }

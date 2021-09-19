@@ -26,7 +26,7 @@ namespace Dev.Io.Ui.Site
             });
             services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_2);
 
-            services.AddTransient<IPeidoRepository,PeidoRepository>();
+            services.AddTransient<IPedidoRepository,PedidoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
