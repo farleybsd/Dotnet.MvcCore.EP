@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AsptNetCoreIdentity.Controllers
 {
-    //[Authorize] Para todos os metodos
+    //[Authorize] Para todos os metodos tem que estar autenticado
     public class HomeController : Controller
     {
         [AllowAnonymous]
@@ -20,6 +20,12 @@ namespace AsptNetCoreIdentity.Controllers
 
         [Authorize]
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [Authorize(Roles ="Admin,Gestor")] // Autorizazao
+        public IActionResult Secret()
         {
             return View();
         }

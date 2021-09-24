@@ -40,6 +40,7 @@ namespace AsptNetCoreIdentity
                     options.UseSqlServer(Configuration.GetConnectionString("AsptNetCoreIdentityContextConnection")));
 
             services.AddDefaultIdentity<IdentityUser>()
+                .AddRoles<IdentityRole>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<AsptNetCoreIdentityContext>();
 

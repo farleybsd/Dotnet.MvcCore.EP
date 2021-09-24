@@ -52,3 +52,43 @@ Registrar _LoginPartial
 
 
  Authenticacao no controller com Asp.net Identity
+
+[Authorize]
+public IActionResult Privacy()
+{
+ return View();
+}
+
+
+
+ Atorizacao no controller com AspNetCore Identity
+
+Startup.cs
+add  .AddRoles<IdentityRole>()
+ Adicionar o link na _layout
+ <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Secret">Segredo</a>
+</li>
+
+[Authorize(Roles ="Admin")] // Autorizazao
+public IActionResult Secret()
+{
+    return View();
+}
+
+Criando uma role para usuario
+
+fazer um insert na tabela AspNetRules
+Coluna Name Nome da role
+iD= Manual
+name = Admin
+NormalizedName = nome da role em maiusculo
+NormalizedName= ADMIN
+
+Vinculando um usuario a uma role
+
+Pegar o id do usuario na tabela AspNetUsers 4a92492f-7072-4f65-b592-8f4d7d59b8e1
+
+Fazer Vinculo na tabela AspNetUserRoles
+Colocar o Id do usuario que fica AspNetUsers na coluna UserId
+Colocar o Id da Role que fica na tabela AspNetRules na Coluna RoleId
