@@ -1,0 +1,8 @@
+Criar migration
+add-migration "Inicial" -Verbose
+
+Remove migration
+Remove-Migration
+
+Aplicando a migration
+update-database -Verbose
