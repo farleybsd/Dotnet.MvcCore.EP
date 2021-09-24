@@ -92,3 +92,25 @@ Pegar o id do usuario na tabela AspNetUsers 4a92492f-7072-4f65-b592-8f4d7d59b8e1
 Fazer Vinculo na tabela AspNetUserRoles
 Colocar o Id do usuario que fica AspNetUsers na coluna UserId
 Colocar o Id da Role que fica na tabela AspNetRules na Coluna RoleId
+
+
+Claims AspNetCore Identity
+
+Alterar sataryup.cs
+services.AddAuthorization(options => {
+
+                options.AddPolicy("PodeExcluir",policy => policy.RequireClaim("PodeExcluir"));
+            });
+
+Claims guarda as informacoes do usuario
+
+Criando uma Claim
+
+Elas ficam salvas na tabela AspnetUserClaims
+UserId Id da tabela AspNetUsers
+ClaimType = PodeExcluir nome da Claim
+ClaimValue = PodeExcluir nome da Claim
+Adicionar o link na _layout
+<li class="nav-item">
+  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SecretClamin">SegredoClaim</a>
+</li>

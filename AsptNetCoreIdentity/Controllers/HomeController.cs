@@ -30,6 +30,18 @@ namespace AsptNetCoreIdentity.Controllers
             return View();
         }
 
+        [Authorize(Policy = "PodeExcluir")] // Autorizazao
+        public IActionResult SecretClamin()
+        {
+            return View("Secret");
+        }
+
+        [Authorize(Policy = "PodeEscrever")] // Autorizazao
+        public IActionResult SecretClaminPodeEscrever()
+        {
+            return View("Secret");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
