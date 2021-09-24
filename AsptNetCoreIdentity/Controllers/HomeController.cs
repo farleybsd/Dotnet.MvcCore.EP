@@ -1,4 +1,5 @@
 ﻿using AsptNetCoreIdentity.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,13 +9,16 @@ using System.Threading.Tasks;
 
 namespace AsptNetCoreIdentity.Controllers
 {
+    //[Authorize] Para todos os metodos
     public class HomeController : Controller
     {
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();

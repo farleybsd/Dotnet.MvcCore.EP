@@ -37,7 +37,7 @@ update-database
 
 Registrar _LoginPartial
  Abrir a view _layout.cshtml
- 
+
   <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
@@ -49,3 +49,6 @@ Registrar _LoginPartial
                         </li>
                     </ul>
  </div>
+
+
+ Authenticacao no controller com Asp.net Identity
