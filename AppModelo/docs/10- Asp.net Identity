@@ -1,0 +1,51 @@
+Instalando Asp.Net Identity
+
+Install-Package Microsoft.AspNetCore.Identity.UI Versao 2.2.0
+
+Adicionar uma Area para Asp.Net Identity
+
+Projeto Web -> Adicionar -> Adicionar Um Novo Item Scarfolding ->Identity
+
+Selecionar as Views
+Account\Login
+Account\Register
+Selecionar o Contexto
+
+
+Alterar a classe Startup.cs
+public void ConfigureServices(IServiceCollection services)
+
+remover IdentityHostingStartup
+
+ services.AddDbContext<AsptNetCoreIdentityContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("AsptNetCoreIdentityContextConnection")));
+
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddDefaultUI(UIFramework.Bootstrap4)
+                .AddEntityFrameworkStores<AsptNetCoreIdentityContext>();
+
+
+
+ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+ app.UseAuthentication();
+
+ Gerando Migration
+ add-migration Identity
+
+Gravando migration
+update-database
+
+Registrar _LoginPartial
+ Abrir a view _layout.cshtml
+ 
+  <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+ </div>
